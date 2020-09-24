@@ -19,8 +19,10 @@ $(document).ready(function () {
     $(".history").append(li);
   }
 
+  var api_key = "a40d75f246e598410934cfe215184077";
+
   function searchWeather(inputValue) {
-    var api_key = "a40d75f246e598410934cfe215184077";
+    // var api_key = "a40d75f246e598410934cfe215184077";
     $.ajax({
       type: "GET",
       url: `http://api.openweathermap.org/data/2.5/weather?q=${inputValue}&appid=${api_key}&units=imperial`,
@@ -70,7 +72,7 @@ $(document).ready(function () {
   }
 
   function getForecast(inputValue) {
-    var api_key = "a40d75f246e598410934cfe215184077";
+    // var api_key = "a40d75f246e598410934cfe215184077";
     $.ajax({
       type: "GET",
       url: `http://api.openweathermap.org/data/2.5/forecast?q=${inputValue}&appid=${api_key}&units=imperial`,
