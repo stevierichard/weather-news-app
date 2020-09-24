@@ -25,7 +25,7 @@ $(document).ready(function () {
     // var api_key = "a40d75f246e598410934cfe215184077";
     $.ajax({
       type: "GET",
-      url: `http://api.openweathermap.org/data/2.5/weather?q=${inputValue}&appid=${api_key}&units=imperial`,
+      url: `https://api.openweathermap.org/data/2.5/weather?q=${inputValue}&appid=${api_key}&units=imperial`,
       dataType: "json",
       success: function (data) {
         // create history link for this search
@@ -56,7 +56,7 @@ $(document).ready(function () {
         var cardBody = $("<div>").addClass("card-body");
         var img = $("<img>").attr(
           "src",
-          "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png"
+          "https://openweathermap.org/img/w/" + data.weather[0].icon + ".png"
         );
 
         // merge and add to page
@@ -75,7 +75,7 @@ $(document).ready(function () {
     // var api_key = "a40d75f246e598410934cfe215184077";
     $.ajax({
       type: "GET",
-      url: `http://api.openweathermap.org/data/2.5/forecast?q=${inputValue}&appid=${api_key}&units=imperial`,
+      url: `https://api.openweathermap.org/data/2.5/forecast?q=${inputValue}&appid=${api_key}&units=imperial`,
       dataType: "json",
       success: function (data) {
         // overwrite any existing content with title and empty row
@@ -98,7 +98,7 @@ $(document).ready(function () {
 
             var img = $("<img>").attr(
               "src",
-              "http://openweathermap.org/img/w/" +
+              "https://openweathermap.org/img/w/" +
                 data.list[i].weather[0].icon +
                 ".png"
             );
